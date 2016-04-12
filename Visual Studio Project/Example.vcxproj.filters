@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{e41451d5-c71c-4260-8609-1b90bcda865a}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{76228681-b96d-48b1-ba41-538c7cd7ebeb}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="源文件\User">
+      <UniqueIdentifier>{2bb6cbee-02f1-418d-b155-f7be7cf0a6a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\CMSIS">
+      <UniqueIdentifier>{89a022c4-b11e-4638-a8f5-44f3e874fbe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Startup">
+      <UniqueIdentifier>{356a2c54-6339-4409-9cf1-dbe2fa0587bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\GD32F1x0_Driver">
+      <UniqueIdentifier>{68f5d96b-92c7-4c2b-bab1-3977fea5861c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\User\main.c">
+      <Filter>源文件\User</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User\stm32f10x_it.c">
+      <Filter>源文件\User</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User\usart1.c">
+      <Filter>源文件\User</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User\delay.c">
+      <Filter>源文件\User</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\GD32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c">
+      <Filter>源文件\GD32F1x0_Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\GD32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c">
+      <Filter>源文件\GD32F1x0_Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\GD32F10x_StdPeriph_Driver\src\stm32f10x_usart.c">
+      <Filter>源文件\GD32F1x0_Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.c">
+      <Filter>源文件\CMSIS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\CMSIS\CM3\DeviceSupport\GD32\STM32F10x\system_stm32f10x.c">
+      <Filter>源文件\CMSIS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\CMSIS\CM3\DeviceSupport\GD32\STM32F10x\startup\arm\startup_stm32f10x_hd.s">
+      <Filter>源文件\Startup</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\libraries\cmsis\cm3\coresupport\core_cm3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\user\usart1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\user\delay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\misc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\cmsis\cm3\devicesupport\gd32\stm32f10x\stm32f10x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_adc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_bkp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_can.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_cec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\user\stm32f10x_conf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_crc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_dac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_dbgmcu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_dma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_exti.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_flash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_fsmc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_gpio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_i2c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\user\stm32f10x_it.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_iwdg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_pwr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_rcc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_rtc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_sdio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_tim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_usart.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_wwdg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\cmsis\cm3\devicesupport\gd32\stm32f10x\system_stm32f10x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

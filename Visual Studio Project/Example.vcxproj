@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Uxample|Win32">
+      <Configuration>Uxample</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8e38c0e7-0ed6-4a3b-88f4-54032fc01217}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uxample|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Uxample|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uxample|Win32'">
+    <NMakeOutput>Example.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>"STM32F10X_HD","USE_STDPERIPH_DRIVER"</NMakePreprocessorDefinitions>
+    <IncludePath>..\Libraries\CMSIS\CM3\CoreSupport;..\Libraries\CMSIS\CM3\DeviceSupport\GD32\STM32F10x;..\Libraries\GD32F10x_StdPeriph_Driver\inc;..\Libraries\USBlibrary\inc;..\User;D:\Keil\ARM\ARMCC\include</IncludePath>
+    <NMakeBuildCommandLine>"D:\Keil\UV4\UV4.exe " -b ..\Project\Example.uvproj -t "Uxample" -j0 -o Build.log</NMakeBuildCommandLine>
+    <NMakeIncludeSearchPath>D:\GD-demo\Uxample;D:\GD-demo\Uxample\User;D:\GD-demo\Uxample\Libraries\GD32F10x_StdPeriph_Driver\inc;D:\GD-demo\Uxample\Libraries\CMSIS\CM3\DeviceSupport\GD32\STM32F10x;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>D:\Keil\ARM\ARMCC\include;D:\GD-demo\Uxample\Libraries\GD32F10x_StdPeriph_Driver\inc;D:\GD-demo\Uxample\Libraries\CMSIS\CM3\DeviceSupport\GD32\STM32F10x;D:\GD-demo\Uxample\User;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath>D:\GD-demo\Uxample\Libraries\GD32F10x_StdPeriph_Driver\inc;D:\GD-demo\Uxample\User;D:\GD-demo\Uxample\Libraries\CMSIS\CM3\CoreSupport;D:\GD-demo\Uxample\Libraries\CMSIS\CM3\DeviceSupport\GD32\STM32F10x\startup\arm;$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\CMSIS\CM3\DeviceSupport\GD32\STM32F10x\startup\arm\startup_stm32f10x_hd.s" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\User\main.c" />
+    <ClCompile Include="..\User\stm32f10x_it.c" />
+    <ClCompile Include="..\User\usart1.c" />
+    <ClCompile Include="..\User\delay.c" />
+    <ClCompile Include="..\Libraries\GD32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" />
+    <ClCompile Include="..\Libraries\GD32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" />
+    <ClCompile Include="..\Libraries\GD32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" />
+    <ClCompile Include="..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.c" />
+    <ClCompile Include="..\Libraries\CMSIS\CM3\DeviceSupport\GD32\STM32F10x\system_stm32f10x.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\libraries\cmsis\cm3\coresupport\core_cm3.h" />
+    <ClInclude Include="..\libraries\cmsis\cm3\devicesupport\gd32\stm32f10x\stm32f10x.h" />
+    <ClInclude Include="..\libraries\cmsis\cm3\devicesupport\gd32\stm32f10x\system_stm32f10x.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\misc.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_adc.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_bkp.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_can.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_cec.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_crc.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_dac.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_dbgmcu.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_dma.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_exti.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_flash.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_fsmc.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_gpio.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_i2c.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_iwdg.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_pwr.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_rcc.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_rtc.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_sdio.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_spi.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_tim.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_usart.h" />
+    <ClInclude Include="..\libraries\gd32f10x_stdperiph_driver\inc\stm32f10x_wwdg.h" />
+    <ClInclude Include="..\user\delay.h" />
+    <ClInclude Include="..\user\stm32f10x_conf.h" />
+    <ClInclude Include="..\user\stm32f10x_it.h" />
+    <ClInclude Include="..\user\usart1.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
